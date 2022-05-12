@@ -1,0 +1,279 @@
+.img-rutina,
+.img-dieta,
+.img-seguimiento{
+    height: 300px;
+    width: 300px;
+    border: 4px solid black;
+    position: relative;
+    left: 55px;
+}
+
+@each $servicios in rutina , dieta , seguimiento{
+    .#{$servicios}img-{
+        background-image: url("img.hmtl/#{$servicios}.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
+/* variables inicio */
+
+$fondo1:rgb(24,22,22);
+$fondo2:  black;
+$fondo3: rgb(65,60,60);
+
+$color1: orange;
+$color2: red;
+$color3: white;
+$color4: black;
+$color5: orangered;
+
+/* variables fin */
+
+/* contacto/header/footer inicio */
+
+header {
+    background-color: $fondo2;
+    
+    .logo{
+    height: 100px;
+    width: 100px;
+    }
+
+    .nav-link{
+        color: $color1;
+        font-size: 21px;
+        transition: 0.7s;
+        font-family: sans-serif;
+        margin: 5px;
+            &:hover{
+            color: $color2;
+            font-size: 27px;
+    }
+    }
+}
+
+footer{
+    background-color: $fondo2;
+    height: 80px;
+    
+  p{
+    color: $color1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    }    
+    
+}
+
+    .contacto{
+    background-color:$fondo1 ;
+    color: $color3;
+   
+    img{
+    height: 900px;
+    width: 100%;
+    }
+ 
+    form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    }
+
+}  
+
+/* contacto/header/footer fin */
+
+/* index inicio */
+
+.banner{
+    background-image: url(img.html/Aaaaaassssssaaaa.JPEG);
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    h1{
+    color: $color5;
+    font-size: 90px;
+    position: relative;
+    top: 250px;
+    text-shadow: 3px 4px 5px black;
+    }
+
+    ul{
+    color:$color3;
+    }
+
+    h3{
+    color: $color3;
+    }
+
+}
+.videoInformativo{
+    background-color:$fondo1;
+
+    video{
+        height: 500px;
+        width: 500px;
+    }
+
+    h2{
+    color: $color3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+    font-family: sans-serif;
+    font-size: 28px;
+    }
+  
+    p{
+    @extend h2;
+    font-size: 20px;
+  }
+}
+
+.videoYT{
+    background-color:$fondo3;
+    
+    h2{
+    color: $color4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 110px;
+    font-family: sans-serif;
+    font-size: 28px;
+    }
+    
+    p{
+    @extend h2;
+    font-size: 20px;
+    }
+}
+
+/* index fin */
+
+/* sobremi inicio */
+
+.sobremi img{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  
+  .mimision img{
+        height: 650px;
+        width: 100%;
+      
+}
+
+$fondo:(
+    x:rgb(24, 22, 22),
+    x2:rgb(66, 65, 65)
+);
+
+@each $x, $bgc in $fondo {
+    .text-#{$x} {
+    color: orangered;
+    font-size: 27px; 
+    display: flex; 
+    align-items: center;
+    background-color: $bgc;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%
+    }
+    
+}
+
+/* sobremi fin */
+
+/* servicios inicio */
+.img-rutina,
+.img-dieta,
+.img-seguimiento{
+    height: 300px;
+    width: 300px;
+    border: 4px solid black;
+    position: relative;
+    left: 55px;
+}
+
+@each $servicios in rutina , dieta , seguimiento{
+    .#{$servicios}img-{
+        background-image: url("img.hmtl/#{$servicios}.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@mixin sizes ($height , $bgcolor, $color){
+    height: $height;
+    background-color: $bgcolor;
+    color: $color;
+}
+
+
+
+
+.servicios{
+    @include sizes (600px,rgb(24,22,22),orangered);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .extras{
+    @include sizes(300px,black,white);
+     background-image: linear-gradient(
+         to bottom, black, rgb(24, 22, 22)
+     )
+  }
+
+  /* precios.html inicio */
+ 
+  button{
+    position: relative;
+    left: 150px;
+    background-color: black;
+    color: orangered;
+  }
+  .planes{
+    background-color:rgb(66, 65, 65) ;
+    height: 800px;
+  
+  
+  h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    color:rgb(24, 22, 22)
+  }
+  
+   p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(24, 22, 22)
+  }
+  
+  aside{
+    border: 2px black solid;
+    color:rgb(24, 22, 22) ;
+    
+  }
+  
+  ul{
+    color:rgb(24, 22, 22) ;
+  }
+}
+
+   /* precios.html fin */
